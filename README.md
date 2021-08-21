@@ -81,6 +81,7 @@ $ python test.py
   <tr>
     <td align="center"><a href="https://github.com/michelmar"><img src="https://avatars.githubusercontent.com/u/60835138?v=4" width="100px;" alt=""/><br /><sub><b>Michel</b></sub></a><br /></td>
     <td align="center"><a href="https://github.com/Matheus1714"><img src="https://avatars.githubusercontent.com/u/39354089?v=4" width="100px;" alt=""/><br /><sub><b>Matheus Mota</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/andreiaio"><img src="https://avatars.githubusercontent.com/u/13735211?v=4" width="100px;" alt=""/><br /><sub><b>Andreia Kaori</b></sub></a><br /></td>
     
   </tr>
 </table>
