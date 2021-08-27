@@ -66,7 +66,7 @@ $ pip install PACKAGE_NAME
 Uma vez realizado o setup do ambiente, basta executar o comando abaixo para iniciar o projeto.
 
 ```
-$ python test.py
+$ python main.py
 ```
 
 <!-- ## Referências
