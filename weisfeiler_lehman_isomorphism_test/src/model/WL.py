@@ -6,11 +6,13 @@ class WL:
     """Weisfeiler Lehman Test"""
 
     def weisfeiler_lehman_isomorphism_test(self, g1, g2):
-        canonical_g1 = self.canonical_form(g1).vs['c']
-        canonical_g2 = self.canonical_form(g2).vs['c']
-        canonical_g1.sort()
-        canonical_g2.sort()
-        return  canonical_g1 == canonical_g2
+        if g1 != None and g2 != None:    
+            canonical_g1 = self.canonical_form(g1).vs['c']
+            canonical_g2 = self.canonical_form(g2).vs['c']
+            canonical_g1.sort()
+            canonical_g2.sort()
+            return  canonical_g1 == canonical_g2
+        return -1
 
     def canonical_form(self, graph, print_graph = False):
         canonical_graph = graph
@@ -45,21 +47,23 @@ class WL:
 
     def c_from_l(self, previous_max,neighbors):
         n  = len(neighbors)
-        neighbours_index = sorted(range(n), key=lambda k: neighbors[k])
-        neighbors.sort()
-        add = 1
-        c_describe = []
-        s = []
-        c = [0 for i in range(0,n)]
-        c[neighbours_index[0]]=previous_max+add
-        s.append(neighbours_index[0])
-        for i in range(1,n):
-            if(neighbors[i-1] != neighbors[i]):
-                add = add + 1
-                c_describe.append(s)
-                s = []
-            s.append(neighbours_index[i])
-            if i == n-1 and s!= []:
-                c_describe.append(s)
-            c[neighbours_index[i]]=previous_max+add
-        return c, c_describe  
+        if(n != 0 and previous_max != None and neighbors != None):
+            neighbours_index = sorted(range(n), key=lambda k: neighbors[k])
+            neighbors.sort()
+            add = 1
+            c_describe = []
+            s = []
+            c = [0 for i in range(0,n)]
+            c[neighbours_index[0]]=previous_max+add
+            s.append(neighbours_index[0])
+            for i in range(1,n):
+                if(neighbors[i-1] != neighbors[i]):
+                    add = add + 1
+                    c_describe.append(s)
+                    s = []
+                s.append(neighbours_index[i])
+                if i == n-1 and s!= []:
+                    c_describe.append(s)
+                c[neighbours_index[i]]=previous_max+add
+            return c, c_describe
+        return -1
