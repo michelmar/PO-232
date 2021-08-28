@@ -6,6 +6,24 @@
 
 Este projeto tem por objetivo implementar o algoritmo de Weisfeiler-Lehman para identificação de isomorfismo entre grafos.
 
+## Arquitetura
+
+O arquivo principal é o `main.py` no diretório raiz. A pasta `/src` é responsável por todo o desenvolvimento do código.
+
+Como o código é de um modelo simplificado, a arquitetura usada foi baseada na MVC, como mostrado abaixo.
+
+    .
+    ├── /img/
+    ├── /src/
+    ├──── /model/
+    ├──── /view/
+    ├──── main.py 
+    ├── /tests/
+    ├── .gitignore
+    ├── main.py
+    ├── README.md
+    ├── requirements.txt
+
 ## Iniciar Projeto
 
 Esta seção tem por objetivo explicar como o projeto pode ser iniciado em uma máquina local.
@@ -66,14 +84,18 @@ $ pip install PACKAGE_NAME
 Uma vez realizado o setup do ambiente, basta executar o comando abaixo para iniciar o projeto.
 
 ```
-$ python test.py
+$ python main.py
 ```
 
-<!-- ## Referências
+## Rodar Testes
 
-* [The Weisfeiler-Lehman Isomorphism Test](https://davidbieber.com/post/2019-05-10-weisfeiler-lehman-isomorphism-test/)
-* [Proof that Subgraph Isomorphism problem is NP-Complete](https://www.geeksforgeeks.org/proof-that-subgraph-isomorphism-problem-is-np-complete/)
-* [Are these 2 graphs isomorphic?](https://math.stackexchange.com/questions/393416/are-these-2-graphs-isomorphic) -->
+Para rodar os testes do projeto basta executar:
+
+```sh
+$ python -m pytest
+```
+
+Caso ocorra algum problema de diretório, acesse a [documentação](https://docs.pytest.org/en/6.2.x/pythonpath.html) para mais informações.
 
 ## Contribuidores
 

@@ -1,3 +1,14 @@
-python-igraph
-pycairo
-numpy
+atomicwrites==1.4.0
+attrs==21.2.0
+colorama==0.4.4
+iniconfig==1.1.1
+numpy==1.21.2
+packaging==21.0
+pluggy==0.13.1
+py==1.10.0
+pycairo==1.20.1
+pyparsing==2.4.7
+pytest==6.2.4
+python-igraph==0.9.6
+texttable==1.6.4
+toml==0.10.2
